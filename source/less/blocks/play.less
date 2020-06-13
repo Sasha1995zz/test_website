@@ -1,0 +1,29 @@
+.play {
+  margin-bottom: 16px;
+}
+
+.play__background {
+  background-image: url(../images/poster-video.jpeg);
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 400px;
+  transition: opacity 1s;
+  position: relative;
+}
+
+.play__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 165px;
+}
+
+.play__background::before {
+ content: '';
+ width: 100%;
+ height: 100%;
+ left: 0;
+ top: 0;
+ position: absolute;
+ background-color: rgba( 0, 0, 0, 0.6);
+}
