@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="preload" href="fonts/Dosis-Medium.woff2" as="font">
+  <link rel="preload" href="fonts/Dosis-SemiBold.woff2" as="font">
+  <link rel="preload" href="fonts/Roboto-Light.woff2" as="font">
+  <link rel="preload" href="fonts/Roboto-Medium.woff2" as="font">
+  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="js/jquery.waterwheelCarousel.js"></script>
+  <script>
+    $(document).ready(function () {
+      var carousel = $("#carousel").waterwheelCarousel({
+        flankingItems: 3
+        , movingToCenter: function ($item) {
+          $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+        }
+        , movedToCenter: function ($item) {
+          $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+        }
+        , movingFromCenter: function ($item) {
+          $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+        }
+        , movedFromCenter: function ($item) {
+          $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+        }
+        , clickedCenter: function ($item) {
+          $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+        }
+      });
+      $('#prev').bind('click', function () {
+        carousel.prev();
+        return false
+      });
+      $('#next').bind('click', function () {
+        carousel.next();
+        return false;
+      });
+      $('#reload').bind('click', function () {
+        newOptions = eval("(" + $('#newoptions').val() + ")");
+        carousel.reload(newOptions);
+        return false;
+      });
+    });
+  </script>
+  <title>Giant</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="page-header">
+     <!-- СЕКЦИЯ 1 -->
+      <div class="page-main">
+        <div class="page-header__menu">
+          <a class="page-header__logo" href="index.html"> <img class="page-header__logo-image" src="images/Logo.svg" alt="logo Giant"></a>
+          <nav class="main-nav">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item"> <a class="main-nav__list-link" href="index.html">Home</a> </li>
+              <li class="site-list__item"> <a class="main-nav__list-link" href="#">Features</a> </li>
+              <li class="site-list__item"> <a class="main-nav__list-link" href="#">Pricing</a> </li>
+            </ul>
+            <button class="main-nav__toggle button" type="button"> <span class="main-nav__toggle-bar">Download Now</span> </button>
+          </nav>
+        </div>
+        <div class="template">
+          <h1 class="template__heading">A Powerful & Unique<br> App Landing Template</h1>
+          <p class="template__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            <br> incididunt ut labore et dolore magna aliqua. </p>
+          <ul class="template__list">
+            <li class="template__item"> <img class="template__check" src="images/correct.svg" alt="check">
+              <p>Unlimited colors: banner with images, slider or video</p>
+            </li>
+            <li class="template__item"> <img class="template__check" src="images/correct.svg" alt="check">
+              <p>Fully Responsive and powered by HTML5 and CSS3</p>
+            </li>
+            <li class="template__item"> <img class="template__check" src="images/correct.svg" alt="check">
+              <p>Very easy to customize : set up in minutes</p>
+            </li>
+          </ul>
+          <button class="template__toggle button" type="button"> <span class="template__toggle-bar">Start Exploring Us</span> </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="advantages">
+        <!-- СЕКЦИЯ 2 -->
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <div class="advantages__horizontal">
+              <div class="advantages__icon"> <img src="images/1.png" width="24" height="22" alt=""> </div>
+              <div class="advantages__wrapper">
+                <h3 class="advantages__heading">Sell any product online</h3>
+                <p class="advantages__title">Over 92% of computers are infected with Adware and spyware. Such software is</p>
+              </div>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__horizontal">
+              <div class="advantages__icon"> <img src="images/2.png" width="22" height="22" alt=""> </div>
+              <div class="advantages__wrapper">
+                <h3 class="advantages__heading">Very easy to customize</h3>
+                <p class="advantages__title">Many of us are so used to working on a computer desktop that when it comes</p>
+              </div>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__horizontal">
+              <div class="advantages__icon"> <img src="images/3.png" width="26" height="26" style="top: 25px; left: 25px;" alt=""> </div>
+              <div class="advantages__wrapper">
+                <h3 class="advantages__heading">Unlimited colors</h3>
+                <p class="advantages__title">Audio player software is used to play &nbsp;back sound recordings in one of the many</p>
+              </div>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__horizontal">
+              <div class="advantages__icon"> <img src="images/4.png" width="20" height="23" alt=""> </div>
+              <div class="advantages__wrapper">
+                <h3 class="advantages__heading">Responsive, HTML5, CSS3</h3>
+                <p class="advantages__title">Computers have become ubiquitous in almost every facet of our lives. At work,</p>
+              </div>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__horizontal">
+              <div class="advantages__icon"> <img src="images/5.png" width="22" height="26" alt=""> </div>
+              <div class="advantages__wrapper">
+                <h3 class="advantages__heading">Designed to convert</h3>
+                <p class="advantages__title">If you are looking for a new way to promote your business that won’t cost</p>
+              </div>
+            </div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__horizontal">
+              <div class="advantages__icon"> <img src="images/6.png" width="26" height="26" style="top: 25px; left: 25px;" alt=""> </div>
+              <div class="advantages__wrapper">
+                <h3 class="advantages__heading">With no boundaries</h3>
+                <p class="advantages__title">Now, if you are interested in being the &nbsp;best player, getting really good money and</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="privilege">
+        <!-- СЕКЦИЯ 3 -->
+        <div class="privilege__horizontal">
+          <div class="privilege__images"> <img src="images/Phones.png" alt=""> </div>
+          <div class="privilege__wrapper">
+            <h2 class="privilege__heading">We don’t leave you stranded</h2>
+            <p class="privilege__title">Everyone’s reasons for learning user interface design are different. If you’re already a developer, or a PM, or a UX designer, why develop this totally separate skill?</p>
+            <p class="privilege__title privilege__paragraph">Everyone’s reasons for learning user interface design are different. If you’re already a developer, or a PM, or a UX designer, why develop this totally separate skill? If you’re already a developer, or a PM, or a UX designer.</p>
+            <ul class="privilege__list">
+              <li class="privilege__item"> <img class="privilege__check" src="images/correct-black.svg" alt="check">
+                <p>Unlimited colors: banner with images, slider or video</p>
+              </li>
+              <li class="privilege__item"> <img class="privilege__check" src="images/correct-black.svg" alt="check">
+                <p>Fully Responsive and powered by HTML5 and CSS3</p>
+              </li>
+              <li class="privilege__item"> <img class="privilege__check" src="images/correct-black.svg" alt="check">
+                <p>Very easy to customize : set up in minutes</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="carousel-slider">
+        <!-- СЕКЦИЯ 4 -->
+        <div class="carousel-slider__bg">
+          <div class="carousel-slider__content">
+            <h2 class="carousel-slider__heading">Take a look at our screenshots</h2>
+            <p class="carousel-slider__title">Everyone’s reasons for learning user interface design are different. If you’re already a developer, or a PM, or a
+              <br> UX designer, why develop this totally separate skill?</p>
+          </div>
+          <div class="carousel-slider__wrapper">
+            <div class="carousel-slider__horizontal">
+              <button id="prev" type="button" class="carousel-slider__button carousel-slider__arrow-left"> &#8406; </button>
+              <div id="carousel">
+                <a href="#"><img src="images/1.jpeg" id="item-1" alt=""></a>
+                <a href="#"><img src="images/2.jpeg" id="item-2" alt=""></a>
+                <a href="#"><img src="images/3.jpeg" id="item-3" alt=""></a>
+                <a href="#"><img src="images/4.jpeg" id="item-4" alt=""></a>
+                <a href="#"><img src="images/5.jpeg" id="item-5" alt=""></a>
+                <a href="#"><img src="images/6.jpeg" id="item-6" alt=""></a>
+                <a href="#"><img src="images/7.jpeg" id="item-7" alt=""></a>
+              </div>
+              <button id="next" type="button" class="carousel-slider__button carousel-slider__arrow-right"> &#8407; </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="package">
+        <!-- СЕКЦИЯ 5 -->
+        <div class="package__contetn">
+          <h2 class="package__proposal">We've got the perfect package for you</h2>
+          <p class="package__title">Everyone’s reasons for learning user interface design are different. If you’re already a developer, or a PM, or a
+            <br> UX designer, why develop this totally separate skill?</p>
+        </div>
+        <ul class="package__price">
+          <li class="package__item">
+            <h3 class="package__heading">Basic</h3>
+            <img class="" src="images/price1.png" width="262" height="120" alt="">
+            <div class="package__list">
+              <p>One User</p>
+              <p>Multiple Access</p>
+              <p>SMS Support</p>
+              <p>24/7 Online Support</p>
+            </div>
+            <div class="package__buy">
+              <p>Start Free Trial</p> <a class="package__btn" href="#">Buy Now</a> </div>
+          </li>
+          <li class="package__item">
+            <h3 class="package__heading">Standard</h3> <img class="" src="images/price2.png" width="262" height="120" alt="">
+            <div class="package__list">
+              <p>Five User</p>
+              <p>Multiple Access</p>
+              <p>SMS Support</p>
+              <p>24/7 Online Support</p>
+            </div>
+            <div class="package__buy">
+              <p>Start Free Trial</p> <a class="package__btn package__btn-active" href="#">Buy Now</a> </div>
+          </li>
+          <li class="package__item">
+            <h3 class="package__heading">Premium</h3> <img class="" src="images/price3.png" width="262" height="120" alt="">
+            <div class="package__list">
+              <p>Twenty User</p>
+              <p>Multiple Access</p>
+              <p>SMS Support</p>
+              <p>24/7 Online Support</p>
+            </div>
+            <div class="package__buy">
+              <p>Start Free Trial</p> <a class="package__btn" href="#">Buy Now</a> </div>
+          </li>
+          <li class="package__item">
+            <h3 class="package__heading">Enterprise</h3> <img class="" src="images/price4.png" width="262" height="120" alt="">
+            <div class="package__list">
+              <p>Unlimited User</p>
+              <p>Multiple Access</p>
+              <p>SMS Support</p>
+              <p>24/7 Online Support</p>
+            </div>
+            <div class="package__buy">
+              <p>Start Free Trial</p> <a class="package__btn" href="#">Buy Now</a> </div>
+          </li>
+        </ul>
+      </section>
+      <section class="play">
+       <!-- СЕКЦИЯ 6 -->
+        <h2 class="visually-hidden">Video-play</h2>
+        <div class="play__background">
+          <!--<video width="1920" height="400" src="" autobuffer controls poster="img/video.jpeg">
+              </video> -->
+          <a class="play__button" aria-label="play video">
+            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 65 65">
+              <circle cx="32.5" cy="32.5" r="32.5" fill="#f21780"></circle>
+              <path d="M27.11 20.94a1.18 1.18 0 0 1 1.22 0l14.56 10.75a1.26 1.26 0 0 1 0 2.16L28.33 44.6a1.21 1.21 0 0 1-1.22 0 1.23 1.23 0 0 1-.61-1.07V22a1.23 1.23 0 0 1 .61-1.06z" fill="#fff"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="reviews__content">
+          <h2 class="reviews__heading">What our customers are saying</h2>
+          <p class="reviews__text">Everyone’s reasons for learning user interface design are different. If you’re already a developer, or a PM, or a
+            <br> UX designer, why develop this totally separate skill?</p>
+        </div>
+        <div class="reviews__wrapper">
+          <div>
+            <button type="button" class="reviews__button"> &#8406; </button>
+          </div>
+          <ul class="reviews__list">
+            <li class="reviews__item">
+              <p class="reviews__title">The JustLanded for WordPress theme is great, super easy to use and to customize and the support is just awesome: super fast and reliable.</p>
+              <div class="reviews__horizontal"> <img class="reviews__photo" src="images/Photo.png" width="80" height="80" alt="">
+                <div> <span class="reviews__name">Alexandra Bullock</span>
+                  <p class="reviews__from">Apple Inc.</p>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item">
+              <p class="reviews__title">Very happy with the theme and incredibly easy to configure, well done! I cannot emphasize how awesome this theme and developer support are.</p>
+              <div class="reviews__horizontal"> <img class="reviews__photo" src="images/Photo1.png" width="80" height="80" alt="">
+                <div> <span class="reviews__name">Gary Sebastian</span>
+                  <p class="reviews__from">Apple Inc.</p>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item">
+              <p class="reviews__title">Definitely a great theme and the support team are fantastic. Customer support is numero uno and ShapingRain have got this spot on. Cheers guys.</p>
+              <div class="reviews__horizontal"> <img class="reviews__photo" src="images/Photo2.png" width="80" height="80" alt="">
+                <div> <span class="reviews__name">Samantha Bilbau</span>
+                  <p class="reviews__from">Apple Inc.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button type="button" class="reviews__button"> &#8407; </button>
+        </div>
+      </section>
+      <section class="application">
+       <!-- СЕКЦИЯ 7 -->
+        <div class="application__wrapper">
+          <h2 class="application__heading">Download Giant App Now</h2>
+          <ul class="application__list">
+            <li class="application__item">
+              <a class="application__link" href="#" aria-label="Download mac" target="_blank"> <img src="images/Icon-mac.png" alt="">
+                <div class="application__download">
+                  <h3 class="application__headline">Download</h3>
+                  <p class="application__title">Download from app store</p>
+                </div>
+              </a>
+            </li>
+            <li class="application__item">
+              <a class="application__link" href="#" aria-label="
+Download android" target="_blank"> <img src="images/Icon-android_.png" alt="">
+                <div class="application__download">
+                  <h3 class="application__headline">Download</h3>
+                  <p class="application__title">Download from play store</p>
+                </div>
+              </a>
+            </li>
+            <li class="application__item">
+              <a class="application__link" href="#" aria-label="Download windows" target="_blank"> <img src="images/Icon-windows.png" alt="">
+                <div class="application__download">
+                  <h3 class="application__headline">Download</h3>
+                  <p class="application__title">Download from microsoft store</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="#" aria-label="
+transition social networks" target="_blank"> <img class="" src="images/icon-fb.png" width="10" height="18" alt=""> </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#" aria-label="
+transition social networks" target="_blank"> <img class="" src="images/icon-tw.png" width="17" height="14" alt=""> </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#" aria-label="
+transition social networks" target="_blank"> <img class="" src="images/icon-dribbble.png" width="17" height="17" alt=""> </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#" aria-label="
+transition social networks" target="_blank"> <img class="" src="images/icon-beh.png" width="22" height="14" alt=""> </a>
+          </li>
+        </ul>
+        <a class="social__name" href="#" aria-label="
+go to site" target="_blank">
+          <p class="social__title">Copyright © 2017 | UXSEVEN - a sister concern of codepixar.com</p>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+  <script src="js/picturefill.min.js"></script>
+  <script src="js/svg4everybody.min.js"></script>
+</body>
+
+</html>

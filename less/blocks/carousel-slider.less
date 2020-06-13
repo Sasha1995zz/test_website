@@ -1,0 +1,102 @@
+.carousel-slider__heading {
+  font-family: "Dosis", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 0.83;
+  letter-spacing: normal;
+  text-align: center;
+  color: @darkblack;
+  margin: 0;
+  padding-top: 119px;
+  margin-bottom: 25px;
+}
+
+.carousel-slider__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+  text-align: center;
+  color: @darkgray;
+  margin-bottom: 64px;
+  width: 100%;
+}
+
+.carousel-slider__bg {
+  background-color: #f7fafc;
+  position: relative;
+  z-index: 1;
+  margin-top: 115px;
+}
+
+.carousel-slider__horizontal {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-bottom: 130px;
+  
+  a {
+    margin-top: 27px;
+  }
+}
+
+.carousel-slider__button {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 34px;
+  padding-top: 7px;
+  border: solid 1px @lightgray;
+  border-radius: 50%;
+  background-color: white;
+  
+  &:hover {
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to top, #fd712c, #f21780);
+    color: white;
+    border: none;
+  }
+}
+
+/* карусель */
+
+.example-desc {
+  margin:3px 0;
+  padding:5px;
+}
+
+#carousel {
+  width: 1260px;
+  height: 500px;
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  
+  img {
+    visibility:hidden; /* hide images until carousel can handle them */
+    cursor:pointer; /* otherwise it's not as obvious items can be clicked */
+  }
+}
+
+.split-left {
+  width: 450px;
+  float: left;
+}
+.split-right {
+  width:400px;
+  float: left;
+  margin-left: 10px;
+}
+#callback-output {
+  height: 300px;
+  overflow: scroll;
+}
